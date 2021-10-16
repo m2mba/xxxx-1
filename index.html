@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>inlämning sept-2021</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
- <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Roboto:wght@100;500&display=swap" rel="stylesheet"> 
-	 
-  <script type="text/javascript" src="octopusscat%20sept-2021_files/dummy.js"></script>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>inlämning sept-2021</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Roboto:wght@100;500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="octopusscat_files/result-light.css"> 
+  <link rel="stylesheet" type="text/css" href="octopusscat_files/comet.css">
+	  
+  <script src="octopusscat_files/dummy.js"></script>
+  <script src="octopusscat_files/particles.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="octopusscat%20sept-2021_files/result-light.css">
-
-      <link rel="stylesheet" type="text/css" href="octopusscat%20sept-2021_files/comet.css">
-      <script type="text/javascript" src="octopusscat%20sept-2021_files/particles.js"></script>
-
-<style>
-	      
-<style id="compiled-css" type="text/css">
-
+<style>      
 html, body { height: 100%; }
 
 body {
-  color: whitesmoke;
-  background-color: #323232;
+  height: 100%;
+  background-color: #110011;
   margin: 10px;
   font-size: 18px;
   font-family: 'Gruppo', cursive;
 	}
 
-h1, {
-    margin: auto;
+.header {
+    margin-top: 0;
+    margin-left: 0;
+    position: fixed;
+    text-align: left;
     font-weight: bold;
     line-height: 1.2;
     padding-bottom: 24px;
+    font-family: 'Source Code Pro', monospace;
     }
- footer {
+ 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
   text-align: center;
   margin: 4px;
   font-weight: bold;
 }
 
-.gradient-text, .text-gradient {
+.gradient-text, .text-gradient, .footer, .header, .sidenav, .sidenav a {
     background: linear-gradient(270.97deg, #FFE580 -21.36%, #FF7571 -2.45%, #EA5DAD 26.84%, #C2A0FD 64.15%, #3BF0E4 108.29%, #B2F4B6 159.03%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -53,7 +57,9 @@ h1, {
 }
 
 .background {
-  position: absolute;
+  opacity: 50%;
+  position: fixed;
+  overflow: hidden;
   top: 0;
   bottom: 0;
   left: 0;
@@ -62,48 +68,51 @@ h1, {
 }
  
 a {
-	color: transparent;
-	border-bottom: solid 1px aqua;
+	color: silver;
 }
 
 .sidenav {
-  display: flex;
+  display: block;
   text-align: left;
-  background-position: initial;
+  background-position: fixed;
   width: 0;
-  position: unset;
+  position: fixed;
   overflow: hidden;
   transition: all 0.3s ease;
-  margin: 0;
-  margin-bottom: 64px;
-
+  margin: auto;
+  margin-bottom: 128px;
+  margin-left: 0;
+  background-color: transparent;
+  border-radius: 16px;
 }
 
 .sidenav a { 
-  display: flex;
+  display: block;
   margin: 0;
   float: left;
   width: 280px;
-  text-align: left;
+  text-align: center;
   transition: all 0.3s ease;
-  color: white;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
-  position: flex;
-  background-color: #323232;
-  opacity: 90%;
-  padding: 24px;
+  position: relative;
+  background-position: fixed;
+  opacity: 100%;
+  text-decoration: none; 
+  color: white;
+  padding: 10px;
   padding-left: 0px;
-  padding-top: 14px;
+  padding-top: 10px;
   border-radius: 16px;
-  border-bottom: none;
 
 }
 
-.sidenav a:hover, .dropdown:hover .dropbtn {
-background-color: silver;
-color: #000;
-font-family: 'Gruppo', cursive;
+.sidenav a:hover, .dropdown:hover .dropbtn, .a:hover {
+color: white;
+background-color: #323232;
+border-radius: 16px;
+border-bottom: solid 1px silver;
+font-family: 'Source Code Pro', monospace;
 }
 
 .dropdown {
@@ -132,28 +141,36 @@ font-family: 'Gruppo', cursive;
 .cover-txt {
   text-align: left;
   margin: 2px;
-  background-position: fixed;
+  background-position: top;
   text-indent: 2px;
-  letter-spacing: 4px;
-  position: fixed;
+  position: relative;
   font-family: 'Gruppo', cursive;
 }
 
+.section {
+	position: fixed;
+	left: 350px;
+  	bottom: 300px;
+  	width: 30%;
+  	text-align: right;
+  	margin: 4px;
+	
+}
 
 .container {
-  max-height: 180px;
+  max-height: 350px;
   min-height:100px;
   min-width: 300px;
-  max-width: 350px;
+  max-width: 250px;
   font-size: 16px;
   display: inline block;
   margin: auto;
   margin-top: 8px;
   margin-bottom: 64px;
-  position: right;
-  background-color: #1E1E1E;
+  background-color: silver;
   border-radius: 16px;
   opacity: 90%;
+  color: black;
   padding-top: 32px;
   padding-right:32px;
   padding-left: 32px;
@@ -167,11 +184,11 @@ font-family: 'Gruppo', cursive;
 	display: text;
     font-family: 'Source Code Pro', monospace;
 	font-size: 16px, bolder;
-	color; #DBEDF3;
-	float: bottom;
+	color: black;
+	float: center;
 	line-height: normal;
 	position: flex;
-	background-position: right;
+	background-position: fixed;
 	padding: 8px;
 }
 
@@ -245,45 +262,41 @@ var particles = Particles.init({
 
 
 <body>
-	<div class="gradient-text">
-<h1>INTRODUCTION TO HYBRYD APPLICATION DEVELOPMENT</h1>
-	</div>
-
+<div class="cover-txt">
+	<div class="header">
+<h4>INTRODUCTION TO HYBRYD APPLICATION DEVELOPMENT</h4>
+	
 <main style="display: flex">	
-
 	<div class="text-gradient">
-<span style="font-size: 32px; cursor: pointer; border-radius: 8px;" onclick="openNav()"> &#9776; </span> </div>
-<div id="SideNav" class="sidenav" display="block">
-	<div class="text-gradient">
+		<span style="font-size: 32px; cursor: pointer; border-radius: 8px; border: solid 0,5px silver; padding: 8px;" onclick="openNav()"> &#9776; </span> 
+		<div id="SideNav" class="sidenav a" display="block">
 	<a href="javascript:void(0)" class="sidenav" onclick="closeNav()"> ✖︎ </a>
   <a href="#">Home</a>
   <a href="#">Hybrid Development</a>
   <a href="#">Native vs Hybrid</a>
   <a href="#">Git</a>
 </div>
-</div>
+	</div>
+	</div>
 
-
-</div>
 </main>
 
-<section>
+<div class="section">
 <div class="container">
 	<div class="text-box">
 	 
-  <p id="demo" style="display: none; text-align: center">Hi!
+  <p id="demo" style="display: none; text-align: center, font-weight: bold; colour: black;">Hi!
     Get SEK 100 off your first order a Uber Eats and I’ll get something too. Use eats-g2y0kmb3i5 at checkout. 🎁🌮🍕🍜 https://ubr.to/EatsGiveGet</p>
-</p>
 
 <button type="button" onclick="document.getElementById('demo').style.display='block'"> 🍔 </button>
 </div>
 </div>
-</section>
+</div>
 
 <div class="text-gradient">
-<footer><br><img src="minioctocat.png" alt="octocat" style="width:320px; height:320px"> <br> Hosted with ❤︎ <a href="https://pages.github.com"> GitHub Pages</a> ❤︎ 
-
-</footer>	
+	<div class="footer">
+	<p><br><img src="minioctocat.png" alt="octocat" style="width:160px; height:160px"><br> Hosted with ❤︎ <a href="https://pages.github.com"> GitHub Pages</a> ❤︎ </p>
+	</div>	
 </div>
 
 </body>	
