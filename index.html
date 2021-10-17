@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
   <title>inlämning sept-2021</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -15,46 +15,43 @@
 	  
   <script src="octopusscat_files/dummy.js"></script>
   <script src="octopusscat_files/particles.js"></script>
+   <script src="octopusscat_files/stringify.js" charset="utf-8"></script>
+<script>
+var particles = Particles.init({
+  selector: '.background',
+  color: ['#FFE580', '#404B69', '#DBEDF3', '#FFB5C2', '#8B5FBF', '#8B786D','#FFE580', '#FF7571', '#EA5DAD', '#C2A0FD', '#3BF0E4', '#B2F4B6'],
+  connectParticles: true
+});
+</script>
+  
+<script>
+      let allLines = []
+window.addEventListener("message", (message) => {
+        if (message.data.console){
+          let insert = document.querySelector("#insert")
+          allLines.push(message.data.console.payload)
+          insert.innerHTML = allLines.join(";\r")
+
+          let result = eval.call(null, message.data.console.payload)
+          if (result !== undefined){
+            console.log(result)
+          }
+        }
+      })
+</script>
+
+<script>
+function openNav() {
+  document.getElementById("SideNav").style.width = "90px";
+}
+
+function closeNav() {
+  document.getElementById("SideNav").style.width = "0";
+}
+</script>
 
 <style>      
-html, body { height: 100%; }
-
-body {
-  height: 100%;
-  background-color: #110011;
-  margin: 10px;
-  font-size: 18px;
-  font-family: 'Gruppo', cursive;
-	}
-
-.header {
-    margin-top: 0;
-    margin-left: 0;
-    position: fixed;
-    text-align: left;
-    font-weight: bold;
-    line-height: 1.2;
-    padding-bottom: 24px;
-    font-family: 'Source Code Pro', monospace;
-    }
- 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: transparent;
-  text-align: center;
-  margin: 4px;
-  font-weight: bold;
-}
-
-.gradient-text, .text-gradient, .footer, .header, .sidenav, .sidenav a {
-    background: linear-gradient(270.97deg, #FFE580 -21.36%, #FF7571 -2.45%, #EA5DAD 26.84%, #C2A0FD 64.15%, #3BF0E4 108.29%, #B2F4B6 159.03%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: center;
-}
+html, body { height: 100%; width: 100%;}
 
 .background {
   opacity: 50%;
@@ -67,51 +64,98 @@ body {
   z-index: -1;
 }
  
-a {
-	color: silver;
+body {
+align-items: inline-block;
+  height: 1296px;
+  background-color: #101; opacity: 77%;
+  font-size: 18px;
+  font-family: 'Gruppo', cursive;
+  overflow: hidden;
+	}
+
+.header {
+margin: auto;
+width: 100%;
+    display: block; 
+    line-height: 1.7;
+font-family: 'Source Code Pro', monospace;
+    }
+ 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:;
+  text-align: center;
+  margin-top: 32px;
+
+}
+
+.gradient-text, .text-gradient, .footer, .header, .sidenav a {
+background: linear-gradient(270.97deg, #FFE580 -21.36%, #FF7571 -2.45%, #EA5DAD 26.84%, #C2A0FD 64.15%, #3BF0E4 108.29%, #B2F4B6 159.03%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: center;
+}
+
+a:link {
+  color: #F87609;
+}
+a:visited {
+  color: #09F876;
+}
+a:hover {
+  font-weight: bolder;
+  color: #8BF809;
+}
+a:active {
+  color: #7609F8;
 }
 
 .sidenav {
   display: block;
   text-align: left;
-  background-position: fixed;
+  background-position: absolute;
+  background-color: #101;
   width: 0;
-  position: fixed;
+  position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  margin: auto;
+  margin-left: 10px;
+  margin-top: -36px;
   margin-bottom: 128px;
-  margin-left: 0;
-  background-color: transparent;
   border-radius: 16px;
 }
 
 .sidenav a { 
   display: block;
-  margin: 0;
-  float: left;
-  width: 280px;
+  margin: auto;
+  width: 64px;
+  height: 32px;
   text-align: center;
   transition: all 0.3s ease;
   font-size: 20px;
   font-weight: bold;
-  position: relative;
+  position: flex;
+  float: left;
   background-position: fixed;
   opacity: 100%;
   text-decoration: none; 
-  color: white;
-  padding: 10px;
-  padding-left: 0px;
-  padding-top: 10px;
+  color: #E6E6FA;
+  box-shadow: 0 0 0 4 rgba(0, 0, 0, 4.9), 0 1px 0 0 rgba(0, 0, 0, 0.5);
+  padding: 24px;
+  padding-left: 8px;
+  padding-right: 10px;
+  padding-bottom: 24px;
   border-radius: 16px;
-
 }
-
-.sidenav a:hover, .dropdown:hover .dropbtn, .a:hover {
-color: white;
-background-color: #323232;
+ .sidenav a:hover, .dropdown:hover {
+font-color: #E6E6FA;
+  box-shadow: 0 0 0 4 rgba(0, 0, 0, 4.9), 0 1px 0 0 rgba(0, 0, 0, 0.5);
+background-color: #110011;
 border-radius: 16px;
-border-bottom: solid 1px silver;
+border: solid 4px #E6E6FA;
 font-family: 'Source Code Pro', monospace;
 }
 
@@ -133,155 +177,81 @@ font-family: 'Source Code Pro', monospace;
   margin: 0;
 }
 
-.main {
-	height: 100%;
-	background-position: fixed;
-}
-
-.cover-txt {
-  text-align: left;
-  margin: 2px;
-  background-position: top;
-  text-indent: 2px;
-  position: relative;
-  font-family: 'Gruppo', cursive;
-}
-
-.section {
-	position: fixed;
-	left: 350px;
-  	bottom: 300px;
-  	width: 30%;
-  	text-align: right;
-  	margin: 4px;
-	
+.aside {
+	float: right;
+  	max-width: 350px;
+  	padding: 15px;
+  	margin-left: 35px; 
+  	margin-right: 15px;
+  	background-color: none; 	
+  	position: flex;
 }
 
 .container {
-  max-height: 350px;
-  min-height:100px;
-  min-width: 300px;
-  max-width: 250px;
-  font-size: 16px;
-  display: inline block;
+max-width: 350px;
+max-height: 170px;
   margin: auto;
-  margin-top: 8px;
-  margin-bottom: 64px;
-  background-color: silver;
+  padding: 15px;
+  background-color: #E6E6FA;
+  box-shadow: 0 0 0 4 rgba(0, 0, 0, 4.9), 0 1px 0 0 rgba(0, 0, 0, 0.5);
   border-radius: 16px;
-  opacity: 90%;
-  color: black;
-  padding-top: 32px;
-  padding-right:32px;
-  padding-left: 32px;
-  padding-bottom: 32px;
-  overflow: hidden;
-
+  opacity: 80%;
+  overflow: hidden;  
+  position: relative;
+  float: top;
+  
 }
 
-
 .text-box {
-	display: text;
+	display: block;
     font-family: 'Source Code Pro', monospace;
 	font-size: 16px, bolder;
 	color: black;
-	float: center;
+	text-align: center;
 	line-height: normal;
 	position: flex;
 	background-position: fixed;
-	padding: 8px;
+	padding: 4px;
+	margin: ;
+	
 }
-
 
 button {
-  display: flex;
+  display: block;
   margin: auto;
-  margin-top: 32px;
-  font-size: 56px;  
-  text-align: top;
+  font-size: 45px;  
+  text-align: center;
   border: none;
-  padding-top: 0;
-  padding-right: 32px;
-  padding-bottom: 48px;
-  padding-left: 32px;
+  padding: 4px;
+  margin: 8px;
   background-color: transparent;
   cursor: pointer;
+  box-shadow: 0 0 0 4 rgba(0, 0, 0, 4.9), 0 1px 0 0 rgba(0, 0, 0, 0.5);
   }
-  
 </style>
-
-
-<script>
-function openNav() {
-  document.getElementById("SideNav").style.width = "280px";
-}
-
-function closeNav() {
-  document.getElementById("SideNav").style.width = "0";
-}
-</script>
-
-  <script id="insert"></script>
-
-<script src="octopusscat%20sept-2021_files/stringify.js" charset="utf-8"></script>
-
-
-
-<canvas class="background" style="width: 100%; height: 100%;"></canvas>
-
-<script type="text/javascript">//<![CDATA[
-
-var particles = Particles.init({
-  selector: '.background',
-  color: ['#FFE580', '#404B69', '#DBEDF3', '#FFB5C2', '#8B5FBF', '#8B786D','#FFE580', '#FF7571', '#EA5DAD', '#C2A0FD', '#3BF0E4', '#B2F4B6'],
-  connectParticles: true
-});
-  //]]></script>
-  
-
-    <script>
-      let allLines = []
-
-      window.addEventListener("message", (message) => {
-        if (message.data.console){
-          let insert = document.querySelector("#insert")
-          allLines.push(message.data.console.payload)
-          insert.innerHTML = allLines.join(";\r")
-
-          let result = eval.call(null, message.data.console.payload)
-          if (result !== undefined){
-            console.log(result)
-          }
-        }
-      })
-    </script>
 
 </head>
 
-
-
-
 <body>
-<div class="cover-txt">
-	<div class="header">
-<h4>INTRODUCTION TO HYBRYD APPLICATION DEVELOPMENT</h4>
-	
-<main style="display: flex">	
-	<div class="text-gradient">
-		<span style="font-size: 32px; cursor: pointer; border-radius: 8px; border: solid 0,5px silver; padding: 8px;" onclick="openNav()"> &#9776; </span> 
-		<div id="SideNav" class="sidenav a" display="block">
-	<a href="javascript:void(0)" class="sidenav" onclick="closeNav()"> ✖︎ </a>
+
+<div class="header"><b> ~ INTRO TO HYBRYD APPLICATION DEVELOPMENT ~ <br><span style="font-size: 30px; cursor: pointer; border-radius: 8px; border: solid 4px transparent; padding: 8px; margin: 8px;" onclick="openNav()"> &#9776; </span>
+<div id="SideNav" class="sidenav" display="block", background-color: #110011; fon-size: 30px;>
+	<a href="javascript:void(0)" class="sidenav" onclick="closeNav()"> ✖︎ </a></b>
   <a href="#">Home</a>
-  <a href="#">Hybrid Development</a>
-  <a href="#">Native vs Hybrid</a>
-  <a href="#">Git</a>
+  <a href="#">Hybrid</a>
+  <a href="#">Native</a>
+  <a href="#">Git</a></div>
+  </div>
 </div>
 	</div>
 	</div>
-
-</main>
-
-<div class="section">
+<!--
+<blockquote>
+hello
+</blockquote>
+</div>
+-->
+<div class="aside">
 <div class="container">
 	<div class="text-box">
 	 
@@ -295,18 +265,11 @@ var particles = Particles.init({
 
 <div class="text-gradient">
 	<div class="footer">
-	<p><br><img src="minioctocat.png" alt="octocat" style="width:160px; height:160px"><br> Hosted with ❤︎ <a href="https://pages.github.com"> GitHub Pages</a> ❤︎ </p>
+	<br><img src="minioctocat.png" alt="octocat" style="width: 80px; height: 80px"><br> <p>Hosted with ❤︎ <a href="https://pages.github.com"> GitHub Pages</a> ❤︎ </p>
 	</div>	
 </div>
 
+<canvas class="background" style="width: 100%; height: 100%;"></canvas>
+
 </body>	
 </html>
-
-
-
-
-
-
-
-
-	
