@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,36 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Roboto:wght@100;500&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" type="text/css" href="octopusscat_files/result-light.css"> 
-  <link rel="stylesheet" type="text/css" href="octopusscat_files/comet.css">
-	  
-  <script src="octopusscat_files/dummy.js"></script>
-  <script src="octopusscat_files/particles.js"></script>
-   <script src="octopusscat_files/stringify.js" charset="utf-8"></script>
-<script>
-var particles = Particles.init({
-  selector: '.background',
-  color: ['#FFE580', '#404B69', '#DBEDF3', '#FFB5C2', '#8B5FBF', '#8B786D','#FFE580', '#FF7571', '#EA5DAD', '#C2A0FD', '#3BF0E4', '#B2F4B6'],
-  connectParticles: true
-});
-</script>
-  
-<script>
-      let allLines = []
-window.addEventListener("message", (message) => {
-        if (message.data.console){
-          let insert = document.querySelector("#insert")
-          allLines.push(message.data.console.payload)
-          insert.innerHTML = allLines.join(";\r")
-
-          let result = eval.call(null, message.data.console.payload)
-          if (result !== undefined){
-            console.log(result)
-          }
-        }
-      })
-</script>
-
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+ 
 <script>
 function openNav() {
   document.getElementById("SideNav").style.width = "90px";
@@ -51,44 +24,27 @@ function closeNav() {
 </script>
 
 <style>      
-html, body { height: 100%; width: 100%;}
-
-.background {
-  opacity: 50%;
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-}
- 
-body {
-align-items: inline-block;
-  height: 1296px;
-  background-color: #101; opacity: 77%;
-  font-size: 18px;
-  font-family: 'Gruppo', cursive;
-  overflow: hidden;
-	}
+html, body { height: 100%; width: 100% }
 
 .header {
 margin: auto;
+margin-top: 8px;
+margin-left: 16px;
 width: 100%;
     display: block; 
     line-height: 1.7;
+    text-align: left;
 font-family: 'Source Code Pro', monospace;
     }
  
 .footer {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color:;
   text-align: center;
-  margin-top: 32px;
+  margin: 8px;
 
 }
 
@@ -117,22 +73,23 @@ a:active {
   display: block;
   text-align: left;
   background-position: absolute;
-  background-color: #101;
+  background-color: white;
   width: 0;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  margin-left: 10px;
-  margin-top: -36px;
+  margin-left: 16px;
+  margin-top: -56px;
   margin-bottom: 128px;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 .sidenav a { 
   display: block;
   margin: auto;
-  width: 64px;
-  height: 32px;
+  width: 89px;
+  height: 64px;
+  padding-top: 15px;
   text-align: center;
   transition: all 0.3s ease;
   font-size: 20px;
@@ -142,16 +99,12 @@ a:active {
   background-position: fixed;
   opacity: 100%;
   text-decoration: none; 
-  color: #E6E6FA;
+  background-color: white;
   box-shadow: 0 0 0 4 rgba(0, 0, 0, 4.9), 0 1px 0 0 rgba(0, 0, 0, 0.5);
-  padding: 24px;
-  padding-left: 8px;
-  padding-right: 10px;
-  padding-bottom: 24px;
   border-radius: 16px;
 }
  .sidenav a:hover, .dropdown:hover {
-font-color: #E6E6FA;
+color: #E6E6FA;
   box-shadow: 0 0 0 4 rgba(0, 0, 0, 4.9), 0 1px 0 0 rgba(0, 0, 0, 0.5);
 background-color: #110011;
 border-radius: 16px;
@@ -178,28 +131,31 @@ font-family: 'Source Code Pro', monospace;
 }
 
 .aside {
-	float: right;
-  	max-width: 350px;
-  	padding: 15px;
-  	margin-left: 35px; 
-  	margin-right: 15px;
+	display: block;
+	margin: auto;
+   width: 250px;
+  	max-height: 480px;
+  	padding: 32px;
   	background-color: none; 	
-  	position: flex;
+  	  float: top;
+  	  overflow: visible;
+  	      	  	margin-bottom: 100px;
+
+
 }
 
 .container {
-max-width: 350px;
-max-height: 170px;
+max-width: 280px;
+max-height: 180px;
   margin: auto;
-  padding: 15px;
   background-color: #E6E6FA;
+  color: black;
   box-shadow: 0 0 0 4 rgba(0, 0, 0, 4.9), 0 1px 0 0 rgba(0, 0, 0, 0.5);
   border-radius: 16px;
-  opacity: 80%;
+  opacity: 100%;
   overflow: hidden;  
-  position: relative;
-  float: top;
-  
+  position: flex;
+
 }
 
 .text-box {
@@ -210,22 +166,25 @@ max-height: 170px;
 	text-align: center;
 	line-height: normal;
 	position: flex;
-	background-position: fixed;
-	padding: 4px;
-	margin: ;
-	
+	background-position: flex;
+	padding: 32px;
+	margin: auto;
+	  	  float: top;
+
+	overflow: visible;
 }
 
 button {
   display: block;
   margin: auto;
-  font-size: 45px;  
-  text-align: center;
+  font-size: 32px;  
   border: none;
-  padding: 4px;
-  margin: 8px;
+  padding: 32px;
   background-color: transparent;
   cursor: pointer;
+  float: top;
+  	position: flex;
+
   box-shadow: 0 0 0 4 rgba(0, 0, 0, 4.9), 0 1px 0 0 rgba(0, 0, 0, 0.5);
   }
 </style>
@@ -234,9 +193,9 @@ button {
 
 <body>
 
-<div class="header"><b> ~ INTRO TO HYBRYD APPLICATION DEVELOPMENT ~ <br><span style="font-size: 30px; cursor: pointer; border-radius: 8px; border: solid 4px transparent; padding: 8px; margin: 8px;" onclick="openNav()"> &#9776; </span>
-<div id="SideNav" class="sidenav" display="block", background-color: #110011; fon-size: 30px;>
-	<a href="javascript:void(0)" class="sidenav" onclick="closeNav()"> ✖︎ </a></b>
+<div class="header"><b> ~ INTRO TO HYBRYD APPLICATION DEVELOPMENT ~ <br><span style="font-size: 30px; cursor: pointer; border-radius: 8px; border-bottom: solid 1px silver; padding: 8px; margin: 16px;" onclick="openNav()"> &#9776; </span>
+<div id="SideNav" class="sidenav" display="block", background-color: white; fon-size: 30px;>
+	<a href="javascript:void(0)" class="sidenav a" onclick="closeNav()"> ✖︎ </a></b>
   <a href="#">Home</a>
   <a href="#">Hybrid</a>
   <a href="#">Native</a>
@@ -251,25 +210,169 @@ hello
 </blockquote>
 </div>
 -->
-<div class="aside">
+
 <div class="container">
 	<div class="text-box">
 	 
-  <p id="demo" style="display: none; text-align: center, font-weight: bold; colour: black;">Hi!
+  <p id="demo" style="display: none; text-align: center, font-size: 16px; font-weight: bolder; colour: black;">Hi!
     Get SEK 100 off your first order a Uber Eats and I’ll get something too. Use eats-g2y0kmb3i5 at checkout. 🎁🌮🍕🍜 https://ubr.to/EatsGiveGet</p>
 
 <button type="button" onclick="document.getElementById('demo').style.display='block'"> 🍔 </button>
 </div>
 </div>
-</div>
 
 <div class="text-gradient">
 	<div class="footer">
-	<br><img src="minioctocat.png" alt="octocat" style="width: 80px; height: 80px"><br> <p>Hosted with ❤︎ <a href="https://pages.github.com"> GitHub Pages</a> ❤︎ </p>
+	<br><img src="minioctocat.png" alt="octocat" style="width: 80px; height: 80px"><p>Hosted with <a href="https://pages.github.com"> GitHub Pages</a> ❤︎ </p>
 	</div>	
 </div>
 
-<canvas class="background" style="width: 100%; height: 100%;"></canvas>
+ <script type="text/javascript" src="octopusscat_files/dummy.js"></script>
+ 
+ <link rel="stylesheet" type="text/css" href="octopusscat_files/result-light.css"> 
+  <link rel="stylesheet" type="text/css" href="octopusscat_files/comet.css">
+  <script type="text/javascript" src="octopusscat_files/particles.js"></script>  <script src="octopusscat_files/dummy.js"></script>
+  
+<style id="compiled-css" type="text/css">
+body {
+align-items: inline-block;
+  height: 1296px;
+  background-color: white;
+  font-size: 18px;
+  font-family: 'Gruppo', cursive;
+	}
+.background {
+  opacity: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  overflow: visible;
+}
+
+</style>
+
+
+<script id="insert"></script>
+
+
+ <script src="octopusscat_files/stringify.js" charset="utf-8"></script>
+    <script>
+      const customConsole = (w) => {
+        const pushToConsole = (payload, type) => {
+          w.parent.postMessage({
+            console: {
+              payload: stringify(payload),
+              type:    type
+            }
+          }, "*")
+        }
+
+        w.onerror = (message, url, line, column) => {
+          // the line needs to correspond with the editor panel
+          // unfortunately this number needs to be altered every time this view is changed
+          line = line - 70
+          if (line < 0){
+            pushToConsole(message, "error")
+          } else {
+            pushToConsole(`[${line}:${column}] ${message}`, "error")
+          }
+        }
+
+        let console = (function(systemConsole){
+          return {
+            log: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "log")
+              systemConsole.log.apply(this, args)
+            },
+            info: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "info")
+              systemConsole.info.apply(this, args)
+            },
+            warn: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "warn")
+              systemConsole.warn.apply(this, args)
+            },
+            error: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "error")
+              systemConsole.error.apply(this, args)
+            },
+            system: function(arg){
+              pushToConsole(arg, "system")
+            },
+            clear: function(){
+              systemConsole.clear.apply(this, {})
+            },
+            time: function(){
+              let args = Array.from(arguments)
+              systemConsole.time.apply(this, args)
+            },
+            assert: function(assertion, label){
+              if (!assertion){
+                pushToConsole(label, "log")
+              }
+
+              let args = Array.from(arguments)
+              systemConsole.assert.apply(this, args)
+            }
+          }
+        }(window.console))
+
+        window.console = { ...window.console, ...console }
+
+        console.system("Running fiddle")
+      }
+
+      if (window.parent){
+        customConsole(window)
+      }
+    </script>
+
+	<canvas class="background" style="width: 100%; height: 100%;" width="995" height="790"></canvas>
+       
+<script>
+var particles = Particles.init({
+  selector: '.background',
+  color: ['#FFE580', '#404B69', '#DBEDF3', '#FFB5C2', '#8B5FBF', '#8B786D','#FFE580', '#FF7571', '#EA5DAD', '#C2A0FD', '#3BF0E4', '#B2F4B6'],
+  connectParticles: true
+});
+</script>
+
+   <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "ch4q1dtx"
+      }], "*")
+    }
+     window.name = "result"
+  </script>
+  
+<script>
+      let allLines = []
+window.addEventListener("message", (message) => {
+        if (message.data.console){
+          let insert = document.querySelector("#insert")
+          allLines.push(message.data.console.payload)
+          insert.innerHTML = allLines.join(";\r")
+
+          let result = eval.call(null, message.data.console.payload)
+          if (result !== undefined){
+            console.log(result)
+          }
+        }
+      })
+</script>
 
 </body>	
 </html>
