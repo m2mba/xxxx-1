@@ -28,6 +28,7 @@ html, body { height: auto}
 
 .header {
 margin: auto;
+font-size: px;
 margin-top: 8px;
 margin-left: 16px;
 width: 100%;
@@ -39,11 +40,13 @@ font-family: 'Source Code Pro', monospace;
  
 .footer {
   position: absolute;
-  left: 0;
+  left: 8px;
   bottom: 0;
-  width: 100%;
+  width: 30%;
   text-align: center;
   margin: 8px;
+  font-family: 'Source Code Pro', monospace;
+
 
 }
 
@@ -72,7 +75,7 @@ a:active {
   display: block;
   text-align: left;
   background-position: absolute;
-  background-color: honeydew;
+  background-color: #27293D;
   width: 0;
   position: relative;
   overflow: hidden;
@@ -146,22 +149,24 @@ font-family: 'Source Code Pro', monospace;
 .container {
 	box-sizing: border-box;
 	display: block;
+	right: 8px;
+	width: 30%;
 	max-width: 350px;
-  max-height: 275px;
+  max-height: 245px;
   margin: auto;
+  margin-bottom: 180px;
   padding: 16px;
   text-align: center;
-  background-color: #E6E6FA;
-  color: black;
+  background-color: #27293D;
+  color: honeydew;
   border-radius: 16px;
-  position: fixed;
   overflow: hidden;
   box-shadow: 0 0 0 4 rgba(0, 0, 0, 4.9), 0 1px 0 0 rgba(0, 0, 0, 0.5);
   
 }
 
 .text-box {
-	size: inherit;
+	
 	display: block;
     font-family: 'Source Code Pro', monospace;
 	font-size: 16px, bolder;
@@ -169,14 +174,14 @@ font-family: 'Source Code Pro', monospace;
 	text-align: center;
 	line-height: 1,5;
 	background-position: fixed;
-	padding: 16px;
+	padding: 32px;
 	margin: auto;
 	overflow: hidden;
 }
 
 button {
   display: block;
-  margin: auto;
+  margin: 8px;
   border: none;
   padding: 32px;
   background-color: transparent;
@@ -191,7 +196,7 @@ button {
 <body>
 
 <div class="header"><b> ~ INTRO TO HYBRYD APPLICATION DEVELOPMENT ~ <br><span style="font-size: 30px; cursor: pointer; border-radius: 8px; border-bottom: solid 1px silver; padding: 8px; margin: 16px;" onclick="openNav()"> &#9776; </span>
-<div id="SideNav" class="sidenav" display="block", background-color: honeydew; fon-size: 30px;>
+<div id="SideNav" class="sidenav" display="block", style="background-color: #27293D; fon-size: 30px">
 	<a href="javascript:void(0)" class="sidenav a" onclick="closeNav()"> ✖︎ </a></b>
   <a href="#">Home</a>
   <a href="#">Hybrid</a>
@@ -211,7 +216,7 @@ hello
 <div class="container">
 	<div class="text-box">
 	 
-  <p id="demo" style="display: none; text-align: center; font-weight: bolder; colour: black;">Hi!
+  <p id="demo" style="display: none; text-align: center; font-weight: bolder; color: honeydew;">Hi!
     Get SEK 100 off your first order a Uber Eats and I’ll get something too. Use eats-g2y0kmb3i5 at checkout. 🎁🌮🍕🍜 https://ubr.to/EatsGiveGet</p>
 
 <button type="button" onclick="document.getElementById('demo').style.display='block'"> 🍔 </button>
@@ -220,7 +225,7 @@ hello
 
 <div class="text-gradient">
 	<div class="footer">
-	<br><img src="minioctocat.png" alt="octocat" style="width: 80px; height: 80px"><p>Hosted with <a href="https://pages.github.com"> GitHub Pages</a> ❤︎ </p>
+	<p><img src="minioctocat.png" alt="octocat" style="width: 80px; height: 80px"><br>Hosted with  ❤︎ <a href="https://pages.github.com"> GitHub Pages</a></p>
 	</div>	
 </div>
 
